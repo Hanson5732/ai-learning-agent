@@ -10,19 +10,19 @@
         class="el-menu-vertical"
         router
       >
-        <el-menu-item index="/learn">
+        <el-menu-item index="/app/learn">
           <el-icon><Edit /></el-icon>
           <span>知识学习</span>
         </el-menu-item>
-        <el-menu-item index="/history">
+        <el-menu-item index="/app/history">
           <el-icon><Clock /></el-icon>
           <span>历史记录</span>
         </el-menu-item>
-        <el-menu-item index="/notebook">
+        <el-menu-item index="/app/notebook">
           <el-icon><Notebook /></el-icon>
           <span>错题本</span>
         </el-menu-item>
-        <el-menu-item index="/ppt">
+        <el-menu-item index="/app/ppt">
           <el-icon><Document /></el-icon>
           <span>PPT 上传解析</span>
         </el-menu-item>

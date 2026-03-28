@@ -5,7 +5,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/app',
+      path: '/',
       name: 'landing',
       component: () => import('@/views/LandingView.vue'),
       meta: { requiresAuth: false }
@@ -17,11 +17,11 @@ const router = createRouter({
       meta: { requiresAuth: false } // 这个页面不需要登录
     },
     {
-      path: '/',
+      path: '/app',
       name: 'home',
       component: () => import('../views/HomeView.vue'),
       meta: { requiresAuth: true }, // 只有登录了才能进主页
-      redirect: '/learn',
+      redirect: '/app/learn',
       children: [
         {
           path: 'learn', // 注意子路由开头不要加斜杠

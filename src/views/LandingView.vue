@@ -109,7 +109,12 @@ onUnmounted(() => {
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
   color: #333;
   background-color: #fafafa;
-  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 

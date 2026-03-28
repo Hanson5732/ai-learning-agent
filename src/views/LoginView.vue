@@ -65,7 +65,7 @@ const handleLogin = async () => {
     const res: any = await login(params)
     userStore.setToken(res.access_token)
     ElMessage.success('登录成功，欢迎回来！')
-    router.push('/') // 登录成功跳主页
+    router.push('/app') // 登录成功跳主页
   } finally {
     loading.value = false
   }
