@@ -36,6 +36,20 @@
 
                     <div v-if="hasSubmitted && evalResults[q.id]" class="eval-result"
                         :class="evalResults[q.id].is_correct ? 'correct' : 'wrong'">
+                        
+                        <div class="result-header" style="margin-bottom: 8px; font-size: 15px;">
+                            <el-icon v-if="evalResults[q.id].is_correct"><Check /></el-icon>
+                            <el-icon v-else><Close /></el-icon>
+                            <span class="result-text" style="margin-left: 5px;">
+                                {{ evalResults[q.id].is_correct ? '回答正确！' : '回答错误。' }}
+                                正确答案是：<strong>{{ evalResults[q.id].correct_answer }}</strong>
+                            </span>
+                        </div>
+                        
+                        <p class="explanation" style="margin: 0; line-height: 1.5;">
+                            <strong>💡 解析：</strong>{{ evalResults[q.id].explanation }}
+                        </p>
+                        
                     </div>
                 </div>
                 <div class="action-bar" v-if="!hasSubmitted">
